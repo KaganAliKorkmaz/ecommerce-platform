@@ -1,0 +1,45 @@
+.product-management-page {
+  .sortable-header {
+    cursor: pointer;
+    user-select: none;
+    
+    &:hover {
+      background-color: #f8f9fa;
+    }
+  }
+  
+  .stock-badge {
+    min-width: 3rem;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .table {
+    th, td {
+      vertical-align: middle;
+    }
+  }
+  
+  .pagination {
+    margin-top: 2rem;
+  }
+  
+  // Override bootstrap button spacing in table
+  td .btn + .btn {
+    margin-left: 0.25rem;
+  }
+}
+
+// Responsive fixes for small screens
+@media (max-width: 768px) {
+  .product-management-page {
+    .table-responsive {
+      font-size: 0.875rem;
+    }
+    
+    td .btn {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
+    }
+  }
+} 

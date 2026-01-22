@@ -1,0 +1,48 @@
+# Node.js dependencies
+node_modules/
+
+# Environment files
+.env
+**/env*
+
+# System files
+.DS_Store
+**/.DS_Store
+
+# Log files
+*.log
+**/*.log
+
+# Generated files
+backend/invoices/
+**/invoices/
+
+# Demo and setup scripts
+*demo*
+*Demo*
+*setup*
+*Setup*
+backend/run-demo-setup.js
+backend/simple-demo-setup.js
+backend/demo-setup.sql
+backend/check-demo-setup.js
+backend/fix-demo-*.js
+backend/debug-*.js
+backend/test-*.js
+backend/check-*.js
+backend/check_*.sql
+backend/cleanup_*.sql
+
+# Build directories
+**/build/
+**/dist/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp

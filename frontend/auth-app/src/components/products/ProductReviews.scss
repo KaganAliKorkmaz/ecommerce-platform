@@ -1,0 +1,125 @@
+.product-reviews {
+  .review-summary {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    .average-rating {
+      padding: 1rem;
+      
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+        color: #343a40;
+      }
+      
+      .stars {
+        margin-bottom: 10px;
+      }
+      
+      .rating-count {
+        color: #6c757d;
+        font-size: 0.9rem;
+      }
+    }
+    
+    .rating-breakdown {
+      padding: 1rem;
+      
+      h5 {
+        margin-bottom: 15px;
+        color: #343a40;
+      }
+      
+      .rating-bar-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        
+        .rating-label {
+          width: 55px;
+          font-size: 0.9rem;
+          color: #6c757d;
+        }
+        
+        .rating-bar {
+          flex-grow: 1;
+          height: 12px;
+          background-color: #e9ecef;
+          border-radius: 6px;
+          margin: 0 10px;
+          overflow: hidden;
+          
+          .rating-bar-fill {
+            height: 100%;
+            background-color: #0d6efd;
+            border-radius: 6px;
+          }
+        }
+        
+        .rating-count-label {
+          width: 30px;
+          text-align: right;
+          font-size: 0.9rem;
+          color: #6c757d;
+        }
+      }
+    }
+  }
+  
+  .review-card {
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out;
+    
+    &:hover {
+      transform: translateY(-2px);
+    }
+    
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+      
+      .reviewer-info {
+        .reviewer-name {
+          font-size: 1.1rem;
+          margin-bottom: 0;
+        }
+        
+        .review-date {
+          font-size: 0.8rem;
+          color: #6c757d;
+        }
+      }
+      
+      .rating-badge {
+        font-size: 1.1rem;
+        padding: 5px 10px;
+      }
+    }
+    
+    .review-rating {
+      margin-bottom: 10px;
+    }
+    
+    .review-comment {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #212529;
+    }
+  }
+  
+  .star {
+    color: #d3d3d3;
+    margin-right: 2px;
+    font-size: 1.2rem;
+    
+    &.filled {
+      color: #ffc107;
+    }
+  }
+} 

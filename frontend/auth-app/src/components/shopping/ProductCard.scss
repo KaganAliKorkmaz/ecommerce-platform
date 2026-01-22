@@ -1,0 +1,122 @@
+.product-card {
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .product-image-container {
+    position: relative;
+    height: 200px;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+    .product-image {
+      max-height: 180px;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    
+    .wishlist-icon-container {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 2;
+      
+      .wishlist-button {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        transition: transform 0.2s, background-color 0.2s;
+        
+        i {
+          font-size: 1.1rem;
+        }
+        
+        &:hover {
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+  }
+  
+  .product-title-link {
+    cursor: pointer;
+    transition: color 0.2s;
+    
+    &:hover {
+      color: #007bff;
+      text-decoration: underline;
+    }
+  }
+  
+  .product-description {
+    color: #666;
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    margin-bottom: 0.75rem;
+  }
+  
+  .product-details {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+
+    div {
+      margin-bottom: 0.25rem;
+    }
+  }
+  
+  .price-badge {
+    font-size: 1.1rem;
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .stock-badge {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .add-to-cart-btn, .btn {
+    transition: all 0.3s ease;
+    
+    &:hover:not(:disabled) {
+      transform: translateY(-2px);
+    }
+    
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+} 

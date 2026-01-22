@@ -1,0 +1,43 @@
+.add-review-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  .rating-selector {
+    .stars-container {
+      display: flex;
+      align-items: center;
+      
+      .star-wrapper {
+        cursor: pointer;
+        padding: 0 2px;
+        
+        &:first-child {
+          padding-left: 0;
+        }
+        
+        .star {
+          font-size: 1.8rem;
+          color: #d3d3d3;
+          transition: color 0.2s ease;
+          
+          &.filled {
+            color: #ffc107;
+          }
+        }
+      }
+    }
+  }
+  
+  textarea.form-control {
+    border-color: #ced4da;
+    
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    }
+  }
+  
+  .btn-primary {
+    padding: 8px 20px;
+    font-weight: 500;
+  }
+} 

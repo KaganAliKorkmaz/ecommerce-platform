@@ -1,0 +1,113 @@
+.wishlist-page {
+  min-height: 70vh;
+  
+  h1 {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  .wishlist-empty-icon {
+    font-size: 3rem;
+    color: #dc3545;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  .wishlist-item {
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #e9ecef;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+    
+    .wishlist-item-image {
+      text-align: center;
+      margin-bottom: 1rem;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      .wishlist-product-image {
+        max-height: 100%;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+      }
+      
+      .wishlist-placeholder-image {
+        height: 180px;
+        width: 100%;
+        background-color: #f8f9fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #adb5bd;
+        border-radius: 8px;
+      }
+    }
+    
+    .product-link {
+      text-decoration: none;
+      color: inherit;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    
+    .product-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      box-orient: vertical;
+      overflow: hidden;
+      height: 2.7rem;
+    }
+    
+    .product-price {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #0d6efd;
+      margin-bottom: 0.5rem;
+    }
+    
+    .stock-status {
+      margin-bottom: 1rem;
+      
+      .in-stock {
+        color: #198754;
+        font-weight: 500;
+      }
+      
+      .out-of-stock {
+        color: #dc3545;
+        font-weight: 500;
+      }
+    }
+    
+    .wishlist-actions {
+      display: flex;
+      justify-content: space-between;
+      
+      .add-to-cart-btn {
+        flex-grow: 1;
+        margin-right: 0.5rem;
+      }
+      
+      .remove-btn {
+        width: 40px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+} 

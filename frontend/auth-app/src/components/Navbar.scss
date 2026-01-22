@@ -1,0 +1,291 @@
+// Navbar Styling
+.announcement-bar {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 14px;
+  
+  p {
+    margin: 0;
+  }
+}
+
+.navbar-main {
+  background-color: #0046be !important; // BestBuy Blue
+  border-bottom: 1px solid #e5e5e5;
+  
+  .brand-logo {
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-right: 20px;
+    
+    strong {
+      font-weight: 800;
+    }
+  }
+  
+  .search-form {
+    width: 100%;
+    max-width: 600px;
+    
+    .form-control {
+      border: none;
+      border-radius: 2px 0 0 2px;
+      height: 40px;
+      
+      &:focus {
+        box-shadow: none;
+        border-color: #fff;
+      }
+    }
+    
+    .btn {
+      border-radius: 0 2px 2px 0;
+      padding: 0.375rem 1rem;
+      background-color: #ffce00;
+      border-color: #ffce00;
+      color: #000;
+      
+      &:hover {
+        background-color: darken(#ffce00, 5%);
+        border-color: darken(#ffce00, 5%);
+      }
+    }
+  }
+  
+  .nav-main {
+    .nav-dropdown {
+      margin: 0 15px;
+      
+      // Specific style for the Sales Manager dropdown menu
+      &#sales-nav-dropdown + .dropdown-menu { // Target dropdown-menu sibling of the toggle
+        min-width: 450px !important; // Increased min-width and added !important
+      }
+
+      .dropdown-toggle {
+        color: #fff;
+        font-weight: 500;
+        padding: 8px 0;
+        text-decoration: none;
+        background: none;
+        border: none;
+        
+        &::after {
+          display: inline-block; // Show the caret
+          margin-left: 0.255em;
+          vertical-align: 0.255em;
+          content: "";
+          border-top: 0.3em solid;
+          border-right: 0.3em solid transparent;
+          border-bottom: 0;
+          border-left: 0.3em solid transparent;
+        }
+        
+        // Adjust color for the dropdown caret to match text
+        &::after {
+          color: #fff; 
+        }
+        
+        &:hover {
+          color: #d4d4d4; // Slightly lighter on hover
+        }
+        
+        // Style for the icon and text inside the dropdown toggle
+        span {
+          display: flex;
+          align-items: center;
+
+          i {
+            margin-right: 5px;
+            font-size: 18px;
+          }
+        }
+      }
+      
+      .dropdown-menu {
+        width: auto !important; /* Override default 100% width */
+        min-width: 250px !important; // minimum width
+        width: max-content !important; // içerik kadar genişlesin
+        white-space: nowrap !important; // satır kaydırmasın
+        padding: 10px 0 !important; // içerik üst-alt boşluk
+        box-sizing: border-box;
+        z-index: 1050; // diğer öğelerin üstünde olsun
+        border-radius: 0;
+        margin-top: 0;
+        border: 1px solid #e5e5e5;
+        
+        .dropdown-item {
+          padding: 8px 20px;
+          color: #333;
+          
+          &:hover {
+            background-color: #f8f9fa;
+            color: #568203;
+          }
+        }
+      }
+    }
+    
+    .nav-link {
+      color: #fff !important;
+      padding: 8px 15px;
+      display: flex;
+      align-items: center;
+      
+      i {
+        margin-right: 5px;
+        font-size: 18px;
+      }
+      
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+
+    .cart-link {
+      position: relative;
+      
+      .cart-badge {
+        position: absolute;
+        top: 0;
+        right: 5px;
+        background-color: #ffce00;
+        color: #000;
+        border-radius: 50%;
+        padding: 2px 6px;
+        font-size: 0.7rem;
+        font-weight: bold;
+        min-width: 18px;
+        height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  
+  .nav-icons {
+    display: flex;
+    
+    .nav-icon {
+      color: #333;
+      margin-left: 20px;
+      font-size: 20px;
+      
+      &:hover {
+        color: #568203;
+      }
+    }
+  }
+}
+
+// Categories Menu
+.categories-menu {
+  background-color: #f0f2f4;
+  padding: 8px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+  .categories-nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    .nav-link {
+      color: #444;
+      padding: 0.5rem 0.75rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      border-bottom: 2px solid transparent;
+      
+      &:hover, &:focus {
+        color: #007bff;
+        border-bottom-color: #007bff;
+      }
+      
+      &[as="button"] {
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// Add styling for cart badge
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Responsive adjustments
+@media (max-width: 991px) {
+  .navbar-main {
+    .search-form {
+      margin: 15px 0;
+    }
+    
+    .nav-link {
+      padding: 10px 0;
+    }
+  }
+  
+  .categories-menu {
+    .categories-nav {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      justify-content: flex-start;
+      padding-bottom: 5px;
+      
+      .nav-link {
+        margin-right: 15px;
+      }
+      
+      &::-webkit-scrollbar {
+        height: 2px;
+      }
+      
+      &::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+      }
+    }
+  }
+}
+
+/* Style for button that looks like a text link */
+.text-button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  padding: 0;
+  cursor: pointer;
+  text-align: center;
+  
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+// Force dropdown menu width to be content-based and prevent overflow
+div.dropdown-menu.show {
+  min-width: 250px !important; /* Ensure a minimum width */
+  width: max-content !important; /* Let width be determined by content */
+  white-space: nowrap !important; /* Prevent text wrapping */
+  box-sizing: border-box !important;
+}
+
+// You can also adjust max-width if needed, but be cautious:
+// max-width: 400px !important; 
