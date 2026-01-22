@@ -68,10 +68,4 @@ Infrastructure:
 The application can be run locally using Node.js or deployed using Docker Compose.  
 Kubernetes configuration files are included for scalable deployment scenarios.
 
-## Project Type
 
-Personal full-stack project focused on building a secure, scalable, and production-ready e-commerce system.
-
-## License
-
-ISC
